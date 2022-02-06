@@ -9,6 +9,8 @@ class StudentController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
+    def scafold=Student
+
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
         respond studentService.list(params), model:[studentCount: studentService.count()]
