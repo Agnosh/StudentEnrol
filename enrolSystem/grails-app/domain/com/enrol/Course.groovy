@@ -23,7 +23,7 @@ class Course {
         startDate blank:false, nullable:false
         endDate blank:false, nullable:false
         studyMode blank:false, nullable:false
-        description blank:false, nullable:false, description wiget:'textarea'
+        description blank:false, nullable:false
         tuitionFees blank:false, nullable:false, scale:2
     }
 }
