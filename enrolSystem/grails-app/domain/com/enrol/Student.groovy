@@ -13,7 +13,7 @@ class Student {
     Course course
 
     static constraints = {
-        studentID blank:false, nullable:false
+        studentID blank:false, nullable:false, min:10
         studentName blank:false, nullable:false
         dob blank:false, nullable:false
         isFundingAvailable blank:false, nullable:false
@@ -22,4 +22,7 @@ class Student {
         studentPassword blank:false, nullable:false
         course blank:false, nullable:false
     }
+static hasMany = [course:Course]
+//static hasOne = [course:Course]
+static belongsTo = [course:Course]
 }
