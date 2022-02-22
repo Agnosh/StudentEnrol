@@ -13,6 +13,9 @@ class Course {
     String studyMode
     String description
     Double tuitionFees
+    Module module
+    Lecturer lecturer
+    Student student
 
     String toString(){
         return courseTitle
@@ -27,8 +30,9 @@ class Course {
         startDate blank:false, nullable:false
         endDate blank:false, nullable:false
         studyMode blank:false, nullable:false
-        description blank:false, nullable:false
+        description blank:false, nullable:false; description widget: 'textarea';
         tuitionFees blank:false, nullable:false, scale:2
     }
-static hasMany = [students:Students]
+static hasMany = [module:Module, lecturer:Lecturer, student:Student]
+static belongsTo = [lecturer:Lecturer]
 }
